@@ -4,6 +4,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  background: linear-gradient(165deg, #087abd 26%, #ffffff 26.1%);
 }
 
 .upperContainer {
@@ -26,6 +27,7 @@ body {
   height: 600px;
   width: 600px;
   object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .upperText {
@@ -33,9 +35,10 @@ body {
   flex-flow: column;
   justify-content: space-between;
   padding: 25px;
-  border: solid 1px black;
   height: 400px;
   font-size: 2.2em;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .upperText > h2 {
@@ -48,11 +51,12 @@ body {
 
 .logo {
   height: 40px;
-  margin:0 10px 0 10px;
+  margin: 0 10px 0 10px;
 }
 
 .midContainer {
   width: 70%;
+  margin: 50px 0 100px 0;
 }
 
 .midContainer > h3 {
@@ -70,6 +74,15 @@ body {
 .workContainer div {
   height: 500px;
   background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #087abd;
 }
 
 footer {
@@ -77,36 +90,39 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 100px;
+  margin: 50px;
 }
 
 .footerImg {
   height: 500px;
   width: 600px;
   object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 @media (min-width: 840px) and (max-width: 1024px) {
+  body {
+    background: linear-gradient(165deg, #087abd 13%, #ffffff 13.1%)
+  }
+
   .upperContainer {
-    display:inline-block;
+    display: inline-block;
     width: 80%;
     margin: 50px;
-    border: solid 1px black;
-    height: 550px;
+    height: 100%;
     margin-top: 150px;
   }
 
   .upperContainer > h1 {
     position: absolute;
-    left: 450px;
+    left: 500px;
     top: 20px;
-    color: red;
   }
 
   .mainImage {
     height: 360px;
     width: 360px;
-    transform-origin:bottom right;
+    transform-origin: bottom right;
     transform: scale(1.2);
     object-fit: cover;
     float: left;
@@ -139,6 +155,10 @@ footer {
 }
 
 @media (max-width: 840px) {
+  body {
+    background: linear-gradient(165deg, #087abd 9%, #ffffff 9.1%)
+  }
+
   .upperContainer {
     width: 90%;
     margin: 30px 0 40px 0;
@@ -152,7 +172,7 @@ footer {
     object-fit: cover;
     margin: 10px;
   }
-  
+
   .upperContainer > h1 {
     position: absolute;
     left: 30%;
@@ -160,6 +180,7 @@ footer {
   }
 
   .upperText {
+    background-color: transparent;
     align-items: center;
     border: none;
     height: 100%;
@@ -185,12 +206,12 @@ footer {
     margin: 50px 0 50px 0;
   }
 
-  .footerText>div {
+  .footerText > div {
     align-self: center;
   }
 
-  .footerImg{
+  .footerImg {
     width: 100%;
-    transform-origin:top;
+    transform-origin: top;
   }
 }
