@@ -1,10 +1,17 @@
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  background: linear-gradient(165deg, #087abd 26%, #ffffff 26.1%);
+  background: linear-gradient(170deg, #087abd 25.5%, #ffffff 25.6%);
+  font-family: "Roboto", sans-serif;
 }
 
 .upperContainer {
@@ -21,6 +28,9 @@ body {
   top: 500px;
   color: white;
   font-size: 4em;
+  z-index: 1;
+  font-weight: 100;
+  text-shadow: 3px 3px 5px #0000007e;
 }
 
 .mainImage {
@@ -28,14 +38,15 @@ body {
   width: 600px;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
 }
 
 .upperText {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  padding: 25px;
-  height: 400px;
+  padding: 40px;
+  height: 100%;
   font-size: 2.2em;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -43,6 +54,10 @@ body {
 
 .upperText > h2 {
   margin: 0;
+}
+
+.upperText > p {
+  font-weight: 100;
 }
 
 .upperText > div {
@@ -56,7 +71,7 @@ body {
 
 .midContainer {
   width: 70%;
-  margin: 50px 0 100px 0;
+  margin: 50px 0 120px 0;
 }
 
 .midContainer > h3 {
@@ -71,10 +86,48 @@ body {
   gap: 50px;
 }
 
-.workContainer div {
-  height: 500px;
-  background-color: red;
+.workContainer > div {
+  height: 475px;
+  background-color: rgb(255, 244, 143);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.workContainer > div > h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  margin: 0;
+  text-align: center;
+  padding: 30px;
+}
+
+.projectText {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 10px 30px 30px 30px;
+}
+
+.projectText > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: 1.5em;
+  height: 60px;
+}
+
+.projectText > div > img {
+  height: 30px;
+  margin-left: auto;
+}
+
+.projectText > div > svg {
+  height: 30px;
 }
 
 .footerContainer {
@@ -91,6 +144,16 @@ footer {
   align-items: center;
   justify-content: space-between;
   margin: 50px;
+  font-size: 2em;
+}
+
+.footerText{
+  padding-right: 30px;
+}
+
+.footerText > h4 {
+  margin: 10px 0 10px 0;
+  font-size: 1.2em;
 }
 
 .footerImg {
@@ -100,9 +163,9 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media (min-width: 840px) and (max-width: 1024px) {
+@media (min-width: 840px) and (max-width: 1800px) {
   body {
-    background: linear-gradient(165deg, #087abd 13%, #ffffff 13.1%)
+    background: linear-gradient(170deg, #087abd 15%, #ffffff 15.1%);
   }
 
   .upperContainer {
@@ -115,7 +178,7 @@ footer {
 
   .upperContainer > h1 {
     position: absolute;
-    left: 500px;
+    left: 58%;
     top: 20px;
   }
 
@@ -146,17 +209,18 @@ footer {
 
   footer {
     width: 80%;
+    font-size: 1.8em;
   }
 
   .footerImg {
     width: 370px;
-    height: 400px;
+    height: 450px;
   }
 }
 
 @media (max-width: 840px) {
   body {
-    background: linear-gradient(165deg, #087abd 9%, #ffffff 9.1%)
+    background: linear-gradient(165deg, #087abd 9%, #ffffff 9.1%);
   }
 
   .upperContainer {
@@ -175,8 +239,10 @@ footer {
 
   .upperContainer > h1 {
     position: absolute;
-    left: 30%;
+    left: 20px;
+    right: 0;
     top: 380px;
+    text-align: center;
   }
 
   .upperText {
@@ -184,6 +250,9 @@ footer {
     align-items: center;
     border: none;
     height: 100%;
+    margin: 50px 0 0 0;
+    box-shadow: none;
+    padding: 0;
   }
 
   .upperText > div {
@@ -201,6 +270,7 @@ footer {
   }
 
   .footerText {
+    width: 90%;
     display: flex;
     flex-flow: column;
     margin: 50px 0 50px 0;
