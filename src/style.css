@@ -47,7 +47,8 @@ body {
 }
 
 .logo {
-  height: 30px;
+  height: 40px;
+  margin:0 10px 0 10px;
 }
 
 .midContainer {
@@ -85,7 +86,7 @@ footer {
   object-fit: cover;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 840px) and (max-width: 1024px) {
   .upperContainer {
     display:inline-block;
     width: 80%;
@@ -115,7 +116,7 @@ footer {
   .upperText {
     display: block;
     justify-content: center;
-    height: 400px;
+    height: 100%;
     border: none;
   }
 
@@ -137,8 +138,59 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  body {
-    background-color: red;
+@media (max-width: 840px) {
+  .upperContainer {
+    width: 90%;
+    margin: 30px 0 40px 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .mainImage {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    margin: 10px;
+  }
+  
+  .upperContainer > h1 {
+    position: absolute;
+    left: 30%;
+    top: 380px;
+  }
+
+  .upperText {
+    align-items: center;
+    border: none;
+    height: 100%;
+  }
+
+  .upperText > div {
+    margin-left: 0;
+  }
+
+  .midContainer {
+    width: 90%;
+  }
+
+  footer {
+    margin: 0;
+    width: 100%;
+    flex-flow: column;
+  }
+
+  .footerText {
+    display: flex;
+    flex-flow: column;
+    margin: 50px 0 50px 0;
+  }
+
+  .footerText>div {
+    align-self: center;
+  }
+
+  .footerImg{
+    width: 100%;
+    transform-origin:top;
   }
 }
